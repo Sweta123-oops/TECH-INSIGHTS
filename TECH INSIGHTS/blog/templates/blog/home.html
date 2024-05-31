@@ -1,0 +1,33 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}TECH INSIGHTS{% endblock title %}
+{% block content %}
+<body id="bg" style="background-image:url('{% static 'images/bg4.jpg' %}'); background-position: center; background-size: cover; background-repeat: no-repeat; position: relative;">
+    <div class="bg-blur"></div>
+    <div class="col-sm-10 mx-auto">
+        <h1 class="text-center alert alert-primary"><em>TechInsights</em></h1>
+        {% for blog in blogs %}
+        <div class="jumbotron jumbotron-fluid jumbo-color">
+            <div class="container">
+                <h2 class="display-3 font-weight-bold">{{ blog.title }}</h2>
+                <p class="lead text-dark">{{ blog.cont }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <style>
+        .bg-blur {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+        }
+        .col-sm-10 {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</body>
+{% endblock content %}

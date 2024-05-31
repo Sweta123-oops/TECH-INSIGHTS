@@ -1,0 +1,62 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block title %}ABOUT{% endblock title %}
+{% block content %}
+<body style = "background-image:url('{% static 'images/bg2.jpg' %}');">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-sm-10">
+                <div class="container">
+                    <h2 class="text-center text-dark">ABOUT US</h2>
+                    <p>Welcome to TechInsights, your go-to source for the latest trends, insights, and developments in the world of technology. Our mission is to inform, educate, and inspire tech enthusiasts, professionals, and curious minds alike with high-quality, engaging content.</p>
+                    <h4>Who We Are</h4>
+                    <p>TechInsights was founded by a group of passionate tech experts, developers, and writers who believe in the power of technology to transform lives. With years of experience in the industry, our team is dedicated to bringing you accurate, in-depth analyses and commentary on the most relevant topics in tech.</p>
+                    <h4>What We Do</h4>
+                    <p>At TechInsights, we cover a wide range of topics including:</p>
+                    <ul>
+                        <li><b>Emerging Technologies :</b> Stay ahead of the curve with insights into AI, blockchain, IoT, and more.</li>
+                        <li><b>Software Development :</b> Tips, tutorials, and best practices for developers of all levels.</li>
+                        <li><b>Gadget Reviews :</b> Honest, thorough reviews of the latest gadgets and consumer electronics.</li>
+                        <li><b>Industry News :</b> Breaking news and updates from the tech world, from startups to major corporations.</li>
+                        <li><b>Tech Culture :</b> Explore the intersection of technology with society, culture, and the arts.</li>
+                    </ul>
+                    <h4>Our Vision</h4>
+                    <p>We envision a world where technology empowers individuals and communities to achieve their highest potential. By providing valuable content, we aim to foster a knowledgeable, innovative, and connected tech community.</p>
+                    <h4>Why Choose Us</h4>
+                    <ul>
+                        <li><b>Expertise :</b> Our writers and contributors are seasoned professionals with deep industry knowledge.</li>
+                        <li><b>Quality :</b> We prioritize accuracy, clarity, and comprehensiveness in all our articles</li>
+                        <li><b>Engagement :</b> We believe in creating a community. Join the conversation through comments, social media, and our interactive forums.</li>
+                        <li><b>Integrity :</b> Trust is earned. We are committed to transparency and honesty in all our content.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<style>   
+    body{
+        background-position: center bottom;
+        backdrop-filter: blur(4px);
+        background-size: cover;
+
+    } 
+
+    .content-wrapper {
+        margin-left: 20%;
+        margin-top: 2%;
+        margin-right: 20%;
+        position: absolute;
+        z-index: 1;
+        backdrop-filter: blur(0); 
+        width: 1000%;
+        max-width: 1000px;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.9); /* Optional: to make content more readable */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        align-items: center;
+        justify-content: center;
+    }
+</style>
+{% endblock content %}
